@@ -16,7 +16,7 @@ namespace LilFranklinsTreats.DataAccess.Data.Repository.IRepository
             string includeProperties = null
             );
 
-        T GetFirstorDefault(
+        T GetFirstOrDefault(
             Expression<Func<T, bool>> filter = null,
             string includeProperties = null
             );
@@ -24,5 +24,7 @@ namespace LilFranklinsTreats.DataAccess.Data.Repository.IRepository
         void Add(T entity);
         void Remove(int id);
         void Remove(T entity);
+        void RemoveRange(IEnumerable<T> entity);
+
     }
 }

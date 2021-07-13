@@ -1,4 +1,5 @@
 ﻿using LilFranklinsTreats.DataAccess.Data.Repository.IRepository;
+using LilFranklinsTreats.Utility;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -54,7 +55,7 @@ namespace LilFranklinsTreats.DataAccess.Data.Repository
             return query.ToList();
         }
 
-        public T GetFirstorDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
+        public T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
         {
             IQueryable<T> query = dbSet;
 
@@ -84,6 +85,11 @@ namespace LilFranklinsTreats.DataAccess.Data.Repository
         public void Remove(T entity)
         {
             dbSet.Remove(entity);
+        }
+
+        public void RemoveRange(IEnumerable<T> entity)
+        {
+            dbSet.RemoveRange(entity);
         }
     }
 }

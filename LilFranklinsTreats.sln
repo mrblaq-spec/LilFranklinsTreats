@@ -4,8 +4,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LilFranklinsTreats", "LilFranklinsTreats\LilFranklinsTreats.csproj", "{2070978D-AEB7-49F5-B1C2-A36416E0A286}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DBEA9E7E-34AB-4AFD-B06B-BDAD3511B94A} = {DBEA9E7E-34AB-4AFD-B06B-BDAD3511B94A}
+		{B6249E9E-2B9B-4BAE-B855-E8DE9BDF6B3B} = {B6249E9E-2B9B-4BAE-B855-E8DE9BDF6B3B}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LilFranklinsTreats.DataAccess", "LilFranklinsTreats.DataAccess\LilFranklinsTreats.DataAccess.csproj", "{B6249E9E-2B9B-4BAE-B855-E8DE9BDF6B3B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DBEA9E7E-34AB-4AFD-B06B-BDAD3511B94A} = {DBEA9E7E-34AB-4AFD-B06B-BDAD3511B94A}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LilFranklinsTreats.Utility", "LilFranklinsTreats.Utility\LilFranklinsTreats.Utility.csproj", "{2243105C-C160-4588-82B0-884F4AE2ABC3}"
 EndProject
